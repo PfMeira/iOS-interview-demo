@@ -22,11 +22,11 @@ class CollectionViewController: UIViewController {
     @IBOutlet var postCell: PostCell!
     
     fileprivate let itemPerRow: CGFloat = 3
-    fileprivate let sectionInsets = UIEdgeInsetsMake(50.0, 20.0, 50.0, 20.0)
+    fileprivate let sectionInsets = UIEdgeInsetsMake(30.0, 10.0, 30.0, 10.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Posts"
         // Do any additional setup after loading the view.
     }
 
@@ -48,6 +48,13 @@ class CollectionViewController: UIViewController {
 }
 
 extension CollectionViewController: UICollectionViewDelegate{
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        //let vc = DetailTableViewController(nibName: "detailTableViewController", bundle: nil) as DetailTableViewController
+        let vc = DetailTableViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension CollectionViewController: UICollectionViewDataSource{

@@ -12,16 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    var navController: UINavigationController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
-        let collectionViewController = CollectionViewController()
-        window!.rootViewController = collectionViewController
-        window!.makeKeyAndVisible()
+        let collectionView = CollectionViewController(nibName: "CollectionViewController", bundle: nil) as CollectionViewController
+        navController = UINavigationController(rootViewController: collectionView)
+        window?.rootViewController = navController
+        window?.makeKeyAndVisible()
         
         return true
     }

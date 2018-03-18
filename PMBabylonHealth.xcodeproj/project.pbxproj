@@ -17,6 +17,14 @@
 		A335803B205B2BEB0008F33F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3358039205B2BEB0008F33F /* LaunchScreen.storyboard */; };
 		A3358046205B2BEB0008F33F /* PMBabylonHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3358045205B2BEB0008F33F /* PMBabylonHealthTests.swift */; };
 		A3358051205B2BEB0008F33F /* PMBabylonHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3358050205B2BEB0008F33F /* PMBabylonHealthUITests.swift */; };
+		A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */; };
+		A3F0217E205EB2BA0067AE22 /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */; };
+		A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F02183205EB5D90067AE22 /* UserCell.swift */; };
+		A3F02186205EB5D90067AE22 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F02184205EB5D90067AE22 /* UserCell.xib */; };
+		A3F02188205EBEB10067AE22 /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F02187205EBEB10067AE22 /* CommentsCell.swift */; };
+		A3F0218A205EDC490067AE22 /* CommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F02189205EDC490067AE22 /* CommentsCell.xib */; };
+		A3F02191205F1A630067AE22 /* MapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0218F205F1A630067AE22 /* MapViewCell.swift */; };
+		A3F02192205F1A630067AE22 /* MapViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F02190205F1A630067AE22 /* MapViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		A335804C205B2BEB0008F33F /* PMBabylonHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMBabylonHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3358050205B2BEB0008F33F /* PMBabylonHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMBabylonHealthUITests.swift; sourceTree = "<group>"; };
 		A3358052205B2BEB0008F33F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
+		A3F02183205EB5D90067AE22 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		A3F02184205EB5D90067AE22 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		A3F02187205EBEB10067AE22 /* CommentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
+		A3F02189205EDC490067AE22 /* CommentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsCell.xib; sourceTree = "<group>"; };
+		A3F0218F205F1A630067AE22 /* MapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCell.swift; sourceTree = "<group>"; };
+		A3F02190205F1A630067AE22 /* MapViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +99,7 @@
 		A30FEDD0205B2EBC00388EB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A3358062205B2E490008F33F /* NetworkManager */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,7 +147,6 @@
 			children = (
 				A335805E205B2D740008F33F /* AppDelegate */,
 				A30FEDD0205B2EBC00388EB0 /* Model */,
-				A3358062205B2E490008F33F /* NetworkManager */,
 				A3358061205B2E130008F33F /* Helper */,
 				A335805F205B2D830008F33F /* ViewController */,
 				A3358060205B2DDD0008F33F /* View */,
@@ -174,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				A31C64DE205DC4B8002B68CC /* CollectionViewController */,
+				A3F0217A205EB2810067AE22 /* DetailViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -181,6 +198,7 @@
 		A3358060205B2DDD0008F33F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A3F0217F205EB5750067AE22 /* TableViewCell */,
 				A31C64E5205DCAEE002B68CC /* CollevtionViewCell */,
 			);
 			path = View;
@@ -213,6 +231,52 @@
 			);
 			name = Storyboard;
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A3F0217A205EB2810067AE22 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */,
+				A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		A3F0217F205EB5750067AE22 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3F02182205EB5900067AE22 /* UserCell */,
+				A3F02181205EB5820067AE22 /* CommentsCell */,
+				A3F02180205EB57F0067AE22 /* MapViewCell */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		A3F02180205EB57F0067AE22 /* MapViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3F0218F205F1A630067AE22 /* MapViewCell.swift */,
+				A3F02190205F1A630067AE22 /* MapViewCell.xib */,
+			);
+			path = MapViewCell;
+			sourceTree = "<group>";
+		};
+		A3F02181205EB5820067AE22 /* CommentsCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3F02187205EBEB10067AE22 /* CommentsCell.swift */,
+				A3F02189205EDC490067AE22 /* CommentsCell.xib */,
+			);
+			path = CommentsCell;
+			sourceTree = "<group>";
+		};
+		A3F02182205EB5900067AE22 /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				A3F02183205EB5D90067AE22 /* UserCell.swift */,
+				A3F02184205EB5D90067AE22 /* UserCell.xib */,
+			);
+			path = UserCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,10 +387,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31C64E4205DC853002B68CC /* CollectionViewController.xib in Resources */,
+				A3F0217E205EB2BA0067AE22 /* DetailTableViewController.xib in Resources */,
 				A335803B205B2BEB0008F33F /* LaunchScreen.storyboard in Resources */,
 				A31C64EA205DCB45002B68CC /* PostCell.xib in Resources */,
 				A3358038205B2BEB0008F33F /* Assets.xcassets in Resources */,
 				A3358036205B2BEB0008F33F /* Main.storyboard in Resources */,
+				A3F02186205EB5D90067AE22 /* UserCell.xib in Resources */,
+				A3F02192205F1A630067AE22 /* MapViewCell.xib in Resources */,
+				A3F0218A205EDC490067AE22 /* CommentsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,8 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31C64E3205DC853002B68CC /* CollectionViewController.swift in Sources */,
+				A3F02188205EBEB10067AE22 /* CommentsCell.swift in Sources */,
 				A3358031205B2BEB0008F33F /* AppDelegate.swift in Sources */,
 				A31C64E9205DCB45002B68CC /* PostCell.swift in Sources */,
+				A3F02191205F1A630067AE22 /* MapViewCell.swift in Sources */,
+				A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */,
+				A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
