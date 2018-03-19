@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05FE2190C4D242ABDE3AE257 /* Pods_PMBabylonHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08B4A4A3AA1231AAC1251F13 /* Pods_PMBabylonHealth.framework */; };
 		A31C64E3205DC853002B68CC /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C64E1205DC853002B68CC /* CollectionViewController.swift */; };
 		A31C64E4205DC853002B68CC /* CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A31C64E2205DC853002B68CC /* CollectionViewController.xib */; };
 		A31C64E9205DCB45002B68CC /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31C64E7205DCB45002B68CC /* PostCell.swift */; };
@@ -17,6 +18,7 @@
 		A335803B205B2BEB0008F33F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3358039205B2BEB0008F33F /* LaunchScreen.storyboard */; };
 		A3358046205B2BEB0008F33F /* PMBabylonHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3358045205B2BEB0008F33F /* PMBabylonHealthTests.swift */; };
 		A3358051205B2BEB0008F33F /* PMBabylonHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3358050205B2BEB0008F33F /* PMBabylonHealthUITests.swift */; };
+		A339E8DE2060671800F86A23 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A339E8DF2060671800F86A23 /* Alamofire.framework */; };
 		A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */; };
 		A3F0217E205EB2BA0067AE22 /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */; };
 		A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F02183205EB5D90067AE22 /* UserCell.swift */; };
@@ -44,7 +46,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A3F02193205F259D0067AE22 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		08B4A4A3AA1231AAC1251F13 /* Pods_PMBabylonHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PMBabylonHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A31C64E1205DC853002B68CC /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		A31C64E2205DC853002B68CC /* CollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
 		A31C64E7205DCB45002B68CC /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -61,6 +76,7 @@
 		A335804C205B2BEB0008F33F /* PMBabylonHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMBabylonHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3358050205B2BEB0008F33F /* PMBabylonHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMBabylonHealthUITests.swift; sourceTree = "<group>"; };
 		A3358052205B2BEB0008F33F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A339E8DF2060671800F86A23 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
 		A3F02183205EB5D90067AE22 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -69,6 +85,8 @@
 		A3F02189205EDC490067AE22 /* CommentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsCell.xib; sourceTree = "<group>"; };
 		A3F0218F205F1A630067AE22 /* MapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCell.swift; sourceTree = "<group>"; };
 		A3F02190205F1A630067AE22 /* MapViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewCell.xib; sourceTree = "<group>"; };
+		BEDBFC2C70EEB2957A96764B /* Pods-PMBabylonHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMBabylonHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth.debug.xcconfig"; sourceTree = "<group>"; };
+		F03AE6E2BA49620FFD8819FB /* Pods-PMBabylonHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMBabylonHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A339E8DE2060671800F86A23 /* Alamofire.framework in Frameworks */,
+				05FE2190C4D242ABDE3AE257 /* Pods_PMBabylonHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,10 +116,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00F2CC6130E2E547C45F8BCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A339E8DF2060671800F86A23 /* Alamofire.framework */,
+				08B4A4A3AA1231AAC1251F13 /* Pods_PMBabylonHealth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E754FE85C277C5BB63E1C0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEDBFC2C70EEB2957A96764B /* Pods-PMBabylonHealth.debug.xcconfig */,
+				F03AE6E2BA49620FFD8819FB /* Pods-PMBabylonHealth.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A30FEDD0205B2EBC00388EB0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A3358062205B2E490008F33F /* NetworkManager */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -129,6 +166,8 @@
 				A3358044205B2BEB0008F33F /* PMBabylonHealthTests */,
 				A335804F205B2BEB0008F33F /* PMBabylonHealthUITests */,
 				A335802E205B2BEB0008F33F /* Products */,
+				9E754FE85C277C5BB63E1C0A /* Pods */,
+				00F2CC6130E2E547C45F8BCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				A335805E205B2D740008F33F /* AppDelegate */,
+				A3358062205B2E490008F33F /* NetworkManager */,
 				A30FEDD0205B2EBC00388EB0 /* Model */,
 				A3358061205B2E130008F33F /* Helper */,
 				A335805F205B2D830008F33F /* ViewController */,
@@ -286,9 +326,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A3358055205B2BEB0008F33F /* Build configuration list for PBXNativeTarget "PMBabylonHealth" */;
 			buildPhases = (
+				1D8F511E63A58C5E6270D023 /* [CP] Check Pods Manifest.lock */,
+				A3F02194205F25A40067AE22 /* ShellScript */,
 				A3358029205B2BEB0008F33F /* Sources */,
 				A335802A205B2BEB0008F33F /* Frameworks */,
 				A335802B205B2BEB0008F33F /* Resources */,
+				879AFCF2DD3DCAA2FDEF96B2 /* [CP] Embed Pods Frameworks */,
+				A3A754CE42A7057F77264B29 /* [CP] Copy Pods Resources */,
+				A3F02193205F259D0067AE22 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -413,6 +458,73 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D8F511E63A58C5E6270D023 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PMBabylonHealth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		879AFCF2DD3DCAA2FDEF96B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A754CE42A7057F77264B29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3F02194205F25A40067AE22 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A3358029205B2BEB0008F33F /* Sources */ = {
@@ -589,6 +701,7 @@
 		};
 		A3358056205B2BEB0008F33F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEDBFC2C70EEB2957A96764B /* Pods-PMBabylonHealth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -604,6 +717,7 @@
 		};
 		A3358057205B2BEB0008F33F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F03AE6E2BA49620FFD8819FB /* Pods-PMBabylonHealth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

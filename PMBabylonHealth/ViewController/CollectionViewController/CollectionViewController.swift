@@ -10,7 +10,6 @@ import UIKit
 
 class CollectionViewController: UIViewController {
 
-    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.dataSource = self
@@ -34,30 +33,18 @@ class CollectionViewController: UIViewController {
         super.didReceiveMemoryWarning()
 
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
-extension CollectionViewController: UICollectionViewDelegate{
-    
+extension CollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
-        //let vc = DetailTableViewController(nibName: "detailTableViewController", bundle: nil) as DetailTableViewController
-        let vc = DetailTableViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let detailTableViewController = DetailTableViewController()
+        self.navigationController?.pushViewController(detailTableViewController, animated: true)
     }
 }
 
-extension CollectionViewController: UICollectionViewDataSource{
+extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 100
     }
@@ -68,7 +55,9 @@ extension CollectionViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as! PostCell
+        guard let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as?  PostCell else {
+            return UICollectionViewCell()
+        }
         return postCell
     }
 }
