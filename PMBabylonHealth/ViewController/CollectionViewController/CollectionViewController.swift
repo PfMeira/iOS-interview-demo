@@ -23,14 +23,19 @@ class CollectionViewController: UIViewController {
     fileprivate let itemPerRow: CGFloat = 3
     fileprivate let sectionInsets = UIEdgeInsetsMake(30.0, 10.0, 30.0, 10.0)
     
+    let networkManager = NetworkManager.sharedNetworkManager
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Posts"
         
-        let network = NetworkManager.sharedNetworkManager
-        network.getPostInformations(completed: { result in
+        networkManager.getPostInformations(completed: { result in
             switch result {
             case .success(let posts):
+                for i in 0 ..< posts.count{
+                    let post = posts[i]
+                }
+                
                 print(posts)
             case .failure(let error):
                 print(error)
