@@ -5,5 +5,4 @@ disabled_rules:
   - trailing_whitespace
   - legacy_constructor
 excluded: # paths to ignore during linting. overridden by `included`.
-  - Alamofire
   - Pods

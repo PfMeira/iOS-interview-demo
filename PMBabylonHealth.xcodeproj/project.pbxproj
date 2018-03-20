@@ -19,6 +19,7 @@
 		A3358046205B2BEB0008F33F /* PMBabylonHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3358045205B2BEB0008F33F /* PMBabylonHealthTests.swift */; };
 		A3358051205B2BEB0008F33F /* PMBabylonHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3358050205B2BEB0008F33F /* PMBabylonHealthUITests.swift */; };
 		A339E8DE2060671800F86A23 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A339E8DF2060671800F86A23 /* Alamofire.framework */; };
+		A339E8E120606B7E00F86A23 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A339E8E020606B7E00F86A23 /* NetworkManager.swift */; };
 		A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */; };
 		A3F0217E205EB2BA0067AE22 /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */; };
 		A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F02183205EB5D90067AE22 /* UserCell.swift */; };
@@ -77,6 +78,7 @@
 		A3358050205B2BEB0008F33F /* PMBabylonHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMBabylonHealthUITests.swift; sourceTree = "<group>"; };
 		A3358052205B2BEB0008F33F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A339E8DF2060671800F86A23 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A339E8E020606B7E00F86A23 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
 		A3F02183205EB5D90067AE22 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		A3358062205B2E490008F33F /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
+				A339E8E020606B7E00F86A23 /* NetworkManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				A3F02188205EBEB10067AE22 /* CommentsCell.swift in Sources */,
 				A3358031205B2BEB0008F33F /* AppDelegate.swift in Sources */,
 				A31C64E9205DCB45002B68CC /* PostCell.swift in Sources */,
+				A339E8E120606B7E00F86A23 /* NetworkManager.swift in Sources */,
 				A3F02191205F1A630067AE22 /* MapViewCell.swift in Sources */,
 				A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */,
 				A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */,

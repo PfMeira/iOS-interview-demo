@@ -26,7 +26,16 @@ class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Posts"
-        // Do any additional setup after loading the view.
+        
+        let network = NetworkManager.sharedNetworkManager
+        network.getPostInformations(completed: { result in
+            switch result {
+            case .success(let posts):
+                print(posts)
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {
