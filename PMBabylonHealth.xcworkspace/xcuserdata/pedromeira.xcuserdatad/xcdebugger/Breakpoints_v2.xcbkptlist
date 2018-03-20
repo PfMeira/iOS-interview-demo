@@ -10,12 +10,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PMBabylonHealth/ViewController/CollectionViewController/CollectionViewController.swift"
-            timestampString = "543255331.852916"
+            timestampString = "543281070.526049"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PMBabylonHealth/View/CollevtionViewCell/PostCell.swift"
+            timestampString = "543281070.526122"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "PostCell"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PMBabylonHealth/View/CollevtionViewCell/PostCell.swift"
+            timestampString = "543281070.526179"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "configurateCell(title:identifier:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

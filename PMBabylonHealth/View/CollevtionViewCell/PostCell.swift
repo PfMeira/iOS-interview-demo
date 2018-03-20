@@ -10,9 +10,11 @@ import UIKit
 
 class PostCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
+    
+    func configurateCell(title: String, identifier: Int) {
+        //titleLabel.text = title
+     //   idLabel.text = "\(identifier)"
     }
-
 }

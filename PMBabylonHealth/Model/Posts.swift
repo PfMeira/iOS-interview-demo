@@ -9,8 +9,8 @@
 import Foundation
 
 struct Posts {
-    let userId: String
-    let identifier: String
+    let userId: Int
+    let identifier: Int
     let title: String
     let body: String
 }

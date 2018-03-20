@@ -24,7 +24,8 @@ class CollectionViewController: UIViewController {
     fileprivate let sectionInsets = UIEdgeInsetsMake(30.0, 10.0, 30.0, 10.0)
     
     let networkManager = NetworkManager.sharedNetworkManager
-
+    var postModel: [Posts] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Posts"
@@ -32,10 +33,14 @@ class CollectionViewController: UIViewController {
         networkManager.getPostInformations(completed: { result in
             switch result {
             case .success(let posts):
-                for i in 0 ..< posts.count{
+                for i in 0 ..< posts.count {
                     let post = posts[i]
+                    guard let userId = post["userId"] as? Int, let identifier = post["id"] as? Int, let title = post["title"] as? String, let body = post["body"] as? String else {
+                        return }
+                    let postStruct = Posts(userId: userId, identifier: identifier, title: title, body: body)
+                    self.postModel.append(postStruct)
                 }
-                
+                self.collectionView.reloadData()
                 print(posts)
             case .failure(let error):
                 print(error)
@@ -60,7 +65,7 @@ extension CollectionViewController: UICollectionViewDelegate {
 
 extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        return postModel.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -72,6 +77,8 @@ extension CollectionViewController: UICollectionViewDataSource {
         guard let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as?  PostCell else {
             return UICollectionViewCell()
         }
+        let post = postModel[indexPath.row]
+        postCell.configurateCell(title: post.title, identifier: post.identifier)
         return postCell
     }
 }
