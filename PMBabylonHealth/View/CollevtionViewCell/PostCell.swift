@@ -14,7 +14,8 @@ class PostCell: UICollectionViewCell {
     @IBOutlet weak var idLabel: UILabel!
     
     func configurateCell(title: String, identifier: Int) {
-        //titleLabel.text = title
-     //   idLabel.text = "\(identifier)"
+        
+        titleLabel.text = title
+        idLabel.text = "\(identifier)"
     }
 }

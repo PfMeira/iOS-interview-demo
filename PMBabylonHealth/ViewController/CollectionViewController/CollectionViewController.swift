@@ -1,4 +1,4 @@
-//
+  //
 //  CollectionViewController.swift
 //  PMBabylonHealth
 //
@@ -9,7 +9,7 @@
 import UIKit
 
 class CollectionViewController: UIViewController {
-
+    
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.dataSource = self
@@ -20,46 +20,75 @@ class CollectionViewController: UIViewController {
     }
     @IBOutlet var postCell: PostCell!
     
+    @IBOutlet weak var activityIndicatorView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     fileprivate let itemPerRow: CGFloat = 3
-    fileprivate let sectionInsets = UIEdgeInsetsMake(30.0, 10.0, 30.0, 10.0)
+    fileprivate let sectionInsets = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)
     
     let networkManager = NetworkManager.sharedNetworkManager
     var postModel: [Posts] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        stateActivityIndicator (state: false)
+        getPostsInformations()
         self.title = "Posts"
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func getPostsInformations() {
         
         networkManager.getPostInformations(completed: { result in
             switch result {
             case .success(let posts):
                 for i in 0 ..< posts.count {
                     let post = posts[i]
-                    guard let userId = post["userId"] as? Int, let identifier = post["id"] as? Int, let title = post["title"] as? String, let body = post["body"] as? String else {
-                        return }
+                    guard let userId = post["userId"] as? Int, let identifier = post["id"] as? Int, let title = post["title"] as? String, let body = post["body"] as? String else { return }
                     let postStruct = Posts(userId: userId, identifier: identifier, title: title, body: body)
                     self.postModel.append(postStruct)
                 }
                 self.collectionView.reloadData()
-                print(posts)
+                self.stateActivityIndicator (state: true)
             case .failure(let error):
                 print(error)
             }
         })
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-
+    
+    func stateActivityIndicator (state: Bool) {
+        
+        if !state {
+            activityIndicatorView.isHidden = state
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicatorView.isHidden = state
+            activityIndicator.stopAnimating()
+        }
     }
-
 }
 
 extension CollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
-        let detailTableViewController = DetailTableViewController()
-        self.navigationController?.pushViewController(detailTableViewController, animated: true)
+        // id
+        let post = postModel[indexPath.row]
+        networkManager.getCommentsInformations(userIdentifier: post.identifier, completed: { result in
+            
+            switch result {
+            case .success(let comment):
+                print(comment)
+                let detailTableViewController = DetailTableViewController()
+                self.navigationController?.pushViewController(detailTableViewController, animated: true)
+                
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 }
 

@@ -18,7 +18,7 @@ class NetworkManager: NSObject {
     
     typealias GetPosts = (Result <[[String: Any]]>) -> Void
     typealias GetUsers = (Result <[[String: Any]]>) -> Void
-    typealias GetComments = (Result <[[String: Any]]>) -> Void
+    typealias GetComments = (Result <Int>) -> Void
     
     func getPostInformations(completed: @escaping GetPosts) {
         Alamofire.request("https://jsonplaceholder.typicode.com/posts", method: .get, encoding: JSONEncoding.default).responseJSON { response in
@@ -57,18 +57,27 @@ class NetworkManager: NSObject {
         }
     }
     
-    func getCommentsInformations(completed: @escaping GetComments) {
-        Alamofire.request("http://jsonplaceholder.typicode.com/comments", method: .get, encoding: JSONEncoding.default).responseJSON { response in
+    func getCommentsInformations(userIdentifier: Int, completed: @escaping GetComments) {
+        Alamofire.request("https://jsonplaceholder.typicode.com/comments", method: .get, encoding: JSONEncoding.default).responseJSON { response in
             
             let responseResult = response.result
             switch responseResult {
-            case .success (let posts):
-                guard let postsDetails = posts as? [[String: Any]] else {
+            case .success (let comments):
+                guard let commentsDetails = comments as? [[String: Any]] else {
                     let error = NSError()
                     completed(.failure(error))
                     return
                 }
-                completed(.success(postsDetails))
+                var sumPost = 0
+                for increment in 0 ..< commentsDetails.count {
+                    let commentDetail = commentsDetails[increment] 
+                    print(increment)
+                    guard let userId = commentDetail["postId"] as? Int else { return }
+                    if userId == userIdentifier {
+                        sumPost += 1
+                    }
+                }
+                completed(.success(sumPost))
                 
             case .failure(let error):
                 completed(.failure(error))
