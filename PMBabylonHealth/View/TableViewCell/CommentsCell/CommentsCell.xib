@@ -50,6 +50,9 @@
                     <constraint firstItem="CdO-Bb-4EK" firstAttribute="top" secondItem="EiC-PF-xif" secondAttribute="top" constant="2" id="wLE-ci-Iah"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="commentsLabel" destination="CdO-Bb-4EK" id="UPP-6s-VLv"/>
+            </connections>
             <point key="canvasLocation" x="-51" y="2.5"/>
         </tableViewCell>
     </objects>

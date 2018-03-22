@@ -9,4 +9,7 @@
 import UIKit
 
 class MapViewCell: UITableViewCell {
+    
+    //@IBOutlet weak var mapView: MKMapView!
 }
+

@@ -9,45 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PMBabylonHealth/ViewController/CollectionViewController/CollectionViewController.swift"
-            timestampString = "543344330.147943"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "PMBabylonHealth/NetworkManager/NetworkManager.swift"
-            timestampString = "543344330.148015"
+            timestampString = "543364581.7526211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "getCommentsInformations(userIdentifier:completed:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PMBabylonHealth/NetworkManager/NetworkManager.swift"
-            timestampString = "543344330.148357"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "getCommentsInformations(userIdentifier:completed:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getUsersInformations(userIdentifier:completed:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,44 +25,60 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PMBabylonHealth/ViewController/CollectionViewController/CollectionViewController.swift"
-            timestampString = "543344330.148586"
+            filePath = "PMBabylonHealth/NetworkManager/NetworkManager.swift"
+            timestampString = "543364581.752726"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "collectionView(_:didSelectItemAt:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "getUsersInformations(userIdentifier:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PMBabylonHealth/NetworkManager/NetworkManager.swift"
+            timestampString = "543364581.752764"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "getUsersInformations(userIdentifier:completed:)"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.Result&lt;Swift.Int&gt;) -&gt; () in PMBabylonHealth.CollectionViewController.collectionView(__ObjC.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PMBabylonHealth.NetworkManager.getUsersInformations(userIdentifier: Swift.Int, completed: (Alamofire.Result&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "PMBabylonHealth"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pedromeira/Documents/iOS-interview-demo/PMBabylonHealth/ViewController/CollectionViewController/CollectionViewController.swift"
-                  timestampString = "543344330.329417"
+                  urlString = "file:///Users/pedromeira/Documents/Projects/iOSInterviewDemo/PMBabylonHealth/PMBabylonHealth/NetworkManager/NetworkManager.swift"
+                  timestampString = "543364581.8948261"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "289">
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1700">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.Result&lt;Swift.Int&gt;) -&gt; () in PMBabylonHealth.CollectionViewController.collectionView(__ObjC.UICollectionView, didSelectItemAt: Foundation.IndexPath) -&gt; ()"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PMBabylonHealth.NetworkManager.getUsersInformations(userIdentifier: Swift.Int, completed: (Alamofire.Result&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
                   moduleName = "PMBabylonHealth"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pedromeira/Documents/iOS-interview-demo/PMBabylonHealth/ViewController/CollectionViewController/CollectionViewController.swift"
-                  timestampString = "543344330.331167"
+                  urlString = "file:///Users/pedromeira/Documents/Projects/iOSInterviewDemo/PMBabylonHealth/PMBabylonHealth/NetworkManager/NetworkManager.swift"
+                  timestampString = "543364581.896446"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "523">
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "1756">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -106,45 +90,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PMBabylonHealth/NetworkManager/NetworkManager.swift"
-            timestampString = "543344330.148639"
+            timestampString = "543364581.752804"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "getCommentsInformations(userIdentifier:completed:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getUsersInformations(userIdentifier:completed:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PMBabylonHealth.NetworkManager.getCommentsInformations(userIdentifier: Swift.Int, completed: (Alamofire.Result&lt;Swift.Int&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "PMBabylonHealth"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pedromeira/Documents/iOS-interview-demo/PMBabylonHealth/NetworkManager/NetworkManager.swift"
-                  timestampString = "543344330.336358"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "1754">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PMBabylonHealth.NetworkManager.getCommentsInformations(userIdentifier: Swift.Int, completed: (Alamofire.Result&lt;Swift.Int&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "PMBabylonHealth"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pedromeira/Documents/iOS-interview-demo/PMBabylonHealth/NetworkManager/NetworkManager.swift"
-                  timestampString = "543344330.338335"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "1791">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

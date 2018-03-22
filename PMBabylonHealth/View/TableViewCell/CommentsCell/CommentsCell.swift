@@ -10,4 +10,9 @@ import UIKit
 
 class CommentsCell: UITableViewCell {
     
+    @IBOutlet weak var commentsLabel: UILabel!
+    
+    func configurateCell(commentsLabel: String) {
+        self.commentsLabel.text = commentsLabel
+    }
 }

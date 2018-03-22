@@ -9,4 +9,12 @@
 import UIKit
 
 class UserCell: UITableViewCell {
+    
+    @IBOutlet weak var authorName: UILabel!
+    @IBOutlet weak var email: UILabel!
+    
+    func configurateCell(authorName: String, email: String) {
+        self.authorName.text = authorName
+        self.email.text = email
+    }
 }

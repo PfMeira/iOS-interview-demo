@@ -1,4 +1,4 @@
-  //
+//
 //  CollectionViewController.swift
 //  PMBabylonHealth
 //
@@ -26,7 +26,6 @@ class CollectionViewController: UIViewController {
     fileprivate let itemPerRow: CGFloat = 3
     fileprivate let sectionInsets = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)
     
-    let networkManager = NetworkManager.sharedNetworkManager
     var postModel: [Posts] = []
     
     override func viewDidLoad() {
@@ -43,7 +42,7 @@ class CollectionViewController: UIViewController {
     
     func getPostsInformations() {
         
-        networkManager.getPostInformations(completed: { result in
+        NetworkManager.sharedNetworkManager.getPostInformations(completed: { result in
             switch result {
             case .success(let posts):
                 for i in 0 ..< posts.count {
@@ -77,14 +76,26 @@ extension CollectionViewController: UICollectionViewDelegate {
         print(indexPath.row)
         // id
         let post = postModel[indexPath.row]
-        networkManager.getCommentsInformations(userIdentifier: post.identifier, completed: { result in
-            
+        NetworkManager.sharedNetworkManager.getCommentsInformations(userIdentifier: post.identifier, completed: { result in
             switch result {
-            case .success(let comment):
-                print(comment)
-                let detailTableViewController = DetailTableViewController()
-                self.navigationController?.pushViewController(detailTableViewController, animated: true)
+            case .success(let numberComments):
+                print(numberComments)
                 
+                NetworkManager.sharedNetworkManager.getUsersInformations(userIdentifier: post.identifier, completed: { result in
+                    switch result {
+                    case .success(let userInformation):                        
+                        guard let name = userInformation["name"] as? String, let email = userInformation["email"] as? String else { return }
+                        guard let geo = userInformation["geo"] as? [String: Double] else { return }
+                        let latitude = geo["lat"]
+                        let longitude = geo["lng"]
+                        let detailTableViewController = DetailTableViewController()
+                        let postAllInformaticion = PostAllInformaticions(authorName: name, emailAuthor: email, numberOfComments: numberComments, latitude: latitude, longitude: longitude)
+                        detailTableViewController.infoPostDetail = postAllInformaticion
+                        self.navigationController?.pushViewController(detailTableViewController, animated: true)
+                    case .failure(let error):
+                        print(error)
+                    }
+                })
             case .failure(let error):
                 print(error)
             }

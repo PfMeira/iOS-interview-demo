@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailTableViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView! {
         didSet {
             tableView.delegate = self
@@ -24,10 +24,11 @@ class DetailTableViewController: UIViewController {
             tableView.register(mapCell, forCellReuseIdentifier: "mapViewCell")
         }
     }
+    var infoPostDetail: PostAllInformaticions? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
 }
 
 extension DetailTableViewController: UITableViewDelegate {
@@ -64,7 +65,7 @@ extension DetailTableViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             return cell
-        
+            
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentsCell", for: indexPath) as? CommentsCell else {
                 return UITableViewCell()
