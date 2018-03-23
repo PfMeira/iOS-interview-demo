@@ -1,5 +1,5 @@
 //
-//  Posts.swift
+//  Post.swift
 //  PMBabylonHealth
 //
 //  Created by Pedro Meira on 20/03/2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Posts {
+struct Post {
     let userId: Int
     let identifier: Int
     let title: String

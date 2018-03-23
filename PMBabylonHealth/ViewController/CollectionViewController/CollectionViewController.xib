@@ -15,7 +15,6 @@
                 <outlet property="activityIndicator" destination="djQ-GW-ZdT" id="OUS-cO-SBQ"/>
                 <outlet property="activityIndicatorView" destination="HLi-dr-y1L" id="9Z1-E2-oCH"/>
                 <outlet property="collectionView" destination="Nep-3h-a7t" id="VJW-fr-OZk"/>
-                <outlet property="postCell" destination="dkK-Zz-KNX" id="Q6D-yj-Pv4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

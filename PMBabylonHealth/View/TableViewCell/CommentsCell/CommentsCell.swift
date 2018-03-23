@@ -12,9 +12,7 @@ class CommentsCell: UITableViewCell {
     
     @IBOutlet weak var commentsLabel: UILabel!
     
-    func configurateCell(numberComments: Int) {
-        
-        let number = String(numberComments)
-        self.commentsLabel.text = number
+    func configurateCell(fullPost: FullPost ) {
+        self.commentsLabel.text = String(fullPost.numberOfComments)
     }
 }

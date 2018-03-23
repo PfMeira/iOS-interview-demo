@@ -24,10 +24,39 @@ class DetailTableViewController: UIViewController {
             tableView.register(mapCell, forCellReuseIdentifier: "mapViewCell")
         }
     }
-    var infoPostDetail: PostAllInformaticions?
+    var userIdentifier: Int?
+    var fullPost: FullPost?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getFullPostInformations(userIdentifier: userIdentifier)
+    }
+    
+    func getFullPostInformations(userIdentifier: Int?) {
+        
+        guard let identifier = userIdentifier else { return }
+        NetworkManager.sharedNetworkManager.getCommentsInformations(userIdentifier: identifier, completed: { result in
+            switch result {
+            case .success(let numberComments):
+                NetworkManager.sharedNetworkManager.getUsersInformations(userIdentifier: identifier, completed: { result in
+                    switch result {
+                    case .success(let userInformation):
+                        guard let name = userInformation["name"] as? String, let email = userInformation["email"] as? String else { return  }
+                        guard let address = userInformation["address"] as? [String: Any] else {
+                            return }
+                        guard let geo = address["geo"] as? [String: String] else {
+                            return }
+                        guard let latitude = geo["lat"] as? String else { return }
+                        guard let longitude = geo["lng"] as? String else { return }
+                        
+                    case .failure(let error):
+                        print(error)
+                    }
+                })
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 }
 
@@ -64,17 +93,16 @@ extension DetailTableViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? UserCell else {
                 return UITableViewCell()
             }
-            guard let author = infoPostDetail?.authorName else { return UITableViewCell() }
-            guard let email = infoPostDetail?.emailAuthor else { return UITableViewCell() }
-            cell.configurateCell(authorName: author, email: email)
+            guard let author = fullPost?.author else { return UITableViewCell() }
+            cell.configurateCell(user: author)
             return cell
             
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentsCell", for: indexPath) as? CommentsCell else {
                 return UITableViewCell()
             }
-            guard let sumComments = infoPostDetail?.numberOfComments else { return UITableViewCell() }
-            cell.configurateCell(numberComments: sumComments)
+//            guard let sumComments = infoPostDetail?.numberOfComments else { return UITableViewCell() }
+//            cell.configurateCell(numberComments: sumComments)
             return UITableViewCell()
 
         case 2:
@@ -87,3 +115,5 @@ extension DetailTableViewController: UITableViewDataSource {
         }
     }
 }
+
+

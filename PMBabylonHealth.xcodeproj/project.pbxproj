@@ -21,8 +21,8 @@
 		A339E8DE2060671800F86A23 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A339E8DF2060671800F86A23 /* Alamofire.framework */; };
 		A339E8E120606B7E00F86A23 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A339E8E020606B7E00F86A23 /* NetworkManager.swift */; };
 		A36A6FB720646B9E00BF8D4C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36A6FB620646B9E00BF8D4C /* MapKit.framework */; };
-		A3ABD86C206163CD00035F6D /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABD86B206163CD00035F6D /* Posts.swift */; };
-		A3ABD86E2061657F00035F6D /* PostAllInformaticions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABD86D2061657F00035F6D /* PostAllInformaticions.swift */; };
+		A3ABD86C206163CD00035F6D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABD86B206163CD00035F6D /* Post.swift */; };
+		A3ABD86E2061657F00035F6D /* FullPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABD86D2061657F00035F6D /* FullPost.swift */; };
 		A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */; };
 		A3F0217E205EB2BA0067AE22 /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */; };
 		A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F02183205EB5D90067AE22 /* UserCell.swift */; };
@@ -83,8 +83,8 @@
 		A339E8DF2060671800F86A23 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A339E8E020606B7E00F86A23 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A36A6FB620646B9E00BF8D4C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		A3ABD86B206163CD00035F6D /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
-		A3ABD86D2061657F00035F6D /* PostAllInformaticions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAllInformaticions.swift; sourceTree = "<group>"; };
+		A3ABD86B206163CD00035F6D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A3ABD86D2061657F00035F6D /* FullPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPost.swift; sourceTree = "<group>"; };
 		A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
 		A3F02183205EB5D90067AE22 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -190,7 +190,6 @@
 				A335805E205B2D740008F33F /* AppDelegate */,
 				A3358062205B2E490008F33F /* NetworkManager */,
 				A3ABD86A206163BD00035F6D /* Model */,
-				A3358061205B2E130008F33F /* Helper */,
 				A335805F205B2D830008F33F /* ViewController */,
 				A3358060205B2DDD0008F33F /* View */,
 				A3358034205B2BEB0008F33F /* Main.storyboard */,
@@ -247,13 +246,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A3358061205B2E130008F33F /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
 		A3358062205B2E490008F33F /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,8 +272,8 @@
 		A3ABD86A206163BD00035F6D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A3ABD86B206163CD00035F6D /* Posts.swift */,
-				A3ABD86D2061657F00035F6D /* PostAllInformaticions.swift */,
+				A3ABD86B206163CD00035F6D /* Post.swift */,
+				A3ABD86D2061657F00035F6D /* FullPost.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -545,14 +537,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A31C64E3205DC853002B68CC /* CollectionViewController.swift in Sources */,
-				A3ABD86E2061657F00035F6D /* PostAllInformaticions.swift in Sources */,
+				A3ABD86E2061657F00035F6D /* FullPost.swift in Sources */,
 				A3F02188205EBEB10067AE22 /* CommentsCell.swift in Sources */,
 				A3358031205B2BEB0008F33F /* AppDelegate.swift in Sources */,
 				A31C64E9205DCB45002B68CC /* PostCell.swift in Sources */,
 				A339E8E120606B7E00F86A23 /* NetworkManager.swift in Sources */,
 				A3F02191205F1A630067AE22 /* MapViewCell.swift in Sources */,
 				A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */,
-				A3ABD86C206163CD00035F6D /* Posts.swift in Sources */,
+				A3ABD86C206163CD00035F6D /* Post.swift in Sources */,
 				A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

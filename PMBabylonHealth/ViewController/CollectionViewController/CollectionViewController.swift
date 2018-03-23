@@ -18,7 +18,6 @@ class CollectionViewController: UIViewController {
             collectionView?.register(nib, forCellWithReuseIdentifier: "postCell")
         }
     }
-    @IBOutlet var postCell: PostCell!
     
     @IBOutlet weak var activityIndicatorView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -26,7 +25,7 @@ class CollectionViewController: UIViewController {
     fileprivate let itemPerRow: CGFloat = 3
     fileprivate let sectionInsets = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)
     
-    var postModel: [Posts] = []
+    var postModel: [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +47,7 @@ class CollectionViewController: UIViewController {
                 for i in 0 ..< posts.count {
                     let post = posts[i]
                     guard let userId = post["userId"] as? Int, let identifier = post["id"] as? Int, let title = post["title"] as? String, let body = post["body"] as? String else { return }
-                    let postStruct = Posts(userId: userId, identifier: identifier, title: title, body: body)
+                    let postStruct = Post(userId: userId, identifier: identifier, title: title, body: body)
                     self.postModel.append(postStruct)
                 }
                 self.collectionView.reloadData()
@@ -60,7 +59,7 @@ class CollectionViewController: UIViewController {
     }
     
     func stateActivityIndicator (state: Bool) {
-        
+        // FIXME: - simplificar! usar truques fixes
         if !state {
             activityIndicatorView.isHidden = state
             activityIndicator.startAnimating()
@@ -74,37 +73,12 @@ class CollectionViewController: UIViewController {
 extension CollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
-        // id
-        let post = postModel[indexPath.row]
-        NetworkManager.sharedNetworkManager.getCommentsInformations(userIdentifier: post.identifier, completed: { result in
-            switch result {
-            case .success(let numberComments):
-                print(numberComments)
-                
-                NetworkManager.sharedNetworkManager.getUsersInformations(userIdentifier: post.identifier, completed: { result in
-                    switch result {
-                    case .success(let userInformation):                        
-                        guard let name = userInformation["name"] as? String, let email = userInformation["email"] as? String else { return }
-                        guard let address = userInformation["address"] as? [String: Any] else {
-                            return }
-                        guard let geo = address["geo"] as? [String: String] else {
-                            return }
-                        guard let latitude = geo["lat"] as? String else { return }
-                        guard let longitude = geo["lng"] as? String else { return }
-                        
-                        let detailTableViewController = DetailTableViewController()
-                        let postAllInformaticion = PostAllInformaticions(authorName: name, emailAuthor: email, numberOfComments: numberComments, latitude: latitude, longitude: longitude)
-                        detailTableViewController.infoPostDetail = postAllInformaticion
-                        self.navigationController?.pushViewController(detailTableViewController, animated: true)
-                    
-                    case .failure(let error):
-                        print(error)
-                    }
-                })
-            case .failure(let error):
-                print(error)
-            }
-        })
+        // LIXO
+       // Passar ID Apenas
+        let postDetail = postModel[indexPath.row]
+        let detailTableViewController = DetailTableViewController()
+        detailTableViewController.userIdentifier = postDetail.userId
+        self.navigationController?.pushViewController(detailTableViewController, animated: true)
     }
 }
 
@@ -122,6 +96,7 @@ extension CollectionViewController: UICollectionViewDataSource {
         guard let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "postCell", for: indexPath) as?  PostCell else {
             return UICollectionViewCell()
         }
+        // verificar que indexpath menor postModel count
         let post = postModel[indexPath.row]
         postCell.configurateCell(title: post.title, identifier: post.identifier)
         return postCell

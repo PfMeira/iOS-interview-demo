@@ -43,17 +43,18 @@ class NetworkManager: NSObject {
             let responseResult = response.result
             switch responseResult {
             case .success (let posts):
-                guard let postsDetails = posts as? [[String: Any]] else {
+                guard let usersDetails = posts as? [[String: Any]] else {
                     let error = NSError()
                     completed(.failure(error))
                     return
                 }
+                
                 var userDetail: [String: Any] = [:]
-                for i in 0 ..< postsDetails.count {
-                    let user = postsDetails[i]
+                for i in 0 ..< usersDetails.count {
+                    let user = usersDetails[i]
                     guard let idUser = user["id"] as? Int else { return }
                     if userIdentifier == idUser {
-                        userDetail = postsDetails[i]
+                        userDetail = usersDetails[i]
                         break
                     }
                 }
@@ -65,7 +66,8 @@ class NetworkManager: NSObject {
     }
     
     func getCommentsInformations(userIdentifier: Int, completed: @escaping GetComments) {
-        Alamofire.request("https://jsonplaceholder.typicode.com/comments", method: .get, encoding: JSONEncoding.default).responseJSON { response in
+        
+        Alamofire.request("https://jsonplaceholder.typicode.com/comments?postId=\(userIdentifier)", method: .get, encoding: JSONEncoding.default).responseJSON { response in
             
             let responseResult = response.result
             switch responseResult {
@@ -75,16 +77,11 @@ class NetworkManager: NSObject {
                     completed(.failure(error))
                     return
                 }
-                var sumPost = 0
-                for increment in 0 ..< commentsDetails.count {
-                    let commentDetail = commentsDetails[increment] 
-                    print(increment)
-                    guard let userId = commentDetail["postId"] as? Int else { return }
-                    if userId == userIdentifier {
-                        sumPost += 1
-                    }
-                }
-                completed(.success(sumPost))
+//                let userPosts = commentsDetails.filter({ postData in
+//                    guard let id = postData["postId"] as? Int else { return false }
+//                    return id == userIdentifier
+//                })
+                completed(.success(commentsDetails.count))
                 
             case .failure(let error):
                 completed(.failure(error))
