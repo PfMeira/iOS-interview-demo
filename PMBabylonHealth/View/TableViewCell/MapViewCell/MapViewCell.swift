@@ -7,9 +7,27 @@
 //
 
 import UIKit
+import MapKit
 
 class MapViewCell: UITableViewCell {
     
+    let locationManager = CLLocationManager()
+    var pointAnnotation: MKPointAnnotation!
+    
     //@IBOutlet weak var mapView: MKMapView!
+    
+    func configure() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+    }
 }
 
+extension MapViewCell: MKMapViewDelegate {
+    
+}
+
+extension MapViewCell: CLLocationManagerDelegate {
+    
+}

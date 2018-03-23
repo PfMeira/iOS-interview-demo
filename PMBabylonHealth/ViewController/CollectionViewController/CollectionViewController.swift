@@ -85,13 +85,18 @@ extension CollectionViewController: UICollectionViewDelegate {
                     switch result {
                     case .success(let userInformation):                        
                         guard let name = userInformation["name"] as? String, let email = userInformation["email"] as? String else { return }
-                        guard let geo = userInformation["geo"] as? [String: Double] else { return }
-                        let latitude = geo["lat"]
-                        let longitude = geo["lng"]
+                        guard let address = userInformation["address"] as? [String: Any] else {
+                            return }
+                        guard let geo = address["geo"] as? [String: String] else {
+                            return }
+                        guard let latitude = geo["lat"] as? String else { return }
+                        guard let longitude = geo["lng"] as? String else { return }
+                        
                         let detailTableViewController = DetailTableViewController()
                         let postAllInformaticion = PostAllInformaticions(authorName: name, emailAuthor: email, numberOfComments: numberComments, latitude: latitude, longitude: longitude)
                         detailTableViewController.infoPostDetail = postAllInformaticion
                         self.navigationController?.pushViewController(detailTableViewController, animated: true)
+                    
                     case .failure(let error):
                         print(error)
                     }

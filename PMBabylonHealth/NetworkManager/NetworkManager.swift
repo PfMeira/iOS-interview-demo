@@ -18,7 +18,7 @@ class NetworkManager: NSObject {
     
     typealias GetPosts = (Result <[[String: Any]]>) -> Void
     typealias GetUsers = (Result <[String: Any]>) -> Void
-    typealias GetComments = (Result <Double>) -> Void
+    typealias GetComments = (Result <Int>) -> Void
     
     func getPostInformations(completed: @escaping GetPosts) {
         Alamofire.request("https://jsonplaceholder.typicode.com/posts", method: .get, encoding: JSONEncoding.default).responseJSON { response in
@@ -75,7 +75,7 @@ class NetworkManager: NSObject {
                     completed(.failure(error))
                     return
                 }
-                var sumPost = 0.0
+                var sumPost = 0
                 for increment in 0 ..< commentsDetails.count {
                     let commentDetail = commentsDetails[increment] 
                     print(increment)

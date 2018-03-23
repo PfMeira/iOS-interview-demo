@@ -14,7 +14,9 @@ class UserCell: UITableViewCell {
     @IBOutlet weak var email: UILabel!
     
     func configurateCell(authorName: String, email: String) {
-        self.authorName.text = authorName
-        self.email.text = email
+        guard let authorLabel = self.authorName.text else { return }
+        guard let emailLabel = self.email.text else { return }
+        self.authorName.text = "\(authorLabel) \(authorName)"
+        self.email.text  = "\(emailLabel) \(email)"
     }
 }

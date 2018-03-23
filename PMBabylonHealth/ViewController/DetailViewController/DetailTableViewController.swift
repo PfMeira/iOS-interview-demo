@@ -24,7 +24,7 @@ class DetailTableViewController: UIViewController {
             tableView.register(mapCell, forCellReuseIdentifier: "mapViewCell")
         }
     }
-    var infoPostDetail: PostAllInformaticions? = nil
+    var infoPostDetail: PostAllInformaticions?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,19 +64,24 @@ extension DetailTableViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as? UserCell else {
                 return UITableViewCell()
             }
+            guard let author = infoPostDetail?.authorName else { return UITableViewCell() }
+            guard let email = infoPostDetail?.emailAuthor else { return UITableViewCell() }
+            cell.configurateCell(authorName: author, email: email)
             return cell
             
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentsCell", for: indexPath) as? CommentsCell else {
                 return UITableViewCell()
             }
-            return cell
-            
+            guard let sumComments = infoPostDetail?.numberOfComments else { return UITableViewCell() }
+            cell.configurateCell(numberComments: sumComments)
+            return UITableViewCell()
+
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "mapViewCell", for: indexPath) as? MapViewCell else {
                 return UITableViewCell()
             }
-            return cell
+            return UITableViewCell()
         default:
             return UITableViewCell()
         }

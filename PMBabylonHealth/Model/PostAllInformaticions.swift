@@ -11,7 +11,7 @@ import Foundation
 struct PostAllInformaticions {
     let authorName: String
     let emailAuthor: String
-    let numberOfComments: Double
-    let latitude: Double?
-    let longitude: Double?
+    let numberOfComments: Int
+    let latitude: String
+    let longitude: String
 }

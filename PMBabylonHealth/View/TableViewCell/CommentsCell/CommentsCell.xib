@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="40.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="CdO-Bb-4EK">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="CdO-Bb-4EK">
                         <rect key="frame" x="228" y="2" width="150" height="36.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="cxK-dL-FwN"/>
@@ -28,10 +27,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qa8-Ga-6Kt">
-                        <rect key="frame" x="26" y="13" width="150" height="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Comments: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qa8-Ga-6Kt">
+                        <rect key="frame" x="10" y="10" width="160" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="S2J-NE-8Ga"/>
+                            <constraint firstAttribute="width" constant="160" id="Mtz-p3-ThR"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
@@ -39,15 +38,15 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="CdO-Bb-4EK" firstAttribute="leading" secondItem="Qa8-Ga-6Kt" secondAttribute="trailing" constant="52" id="9A6-WP-RG5"/>
+                    <constraint firstItem="CdO-Bb-4EK" firstAttribute="leading" secondItem="Qa8-Ga-6Kt" secondAttribute="trailing" constant="58" id="13V-gR-Vh9"/>
                     <constraint firstItem="CdO-Bb-4EK" firstAttribute="centerY" secondItem="EiC-PF-xif" secondAttribute="centerY" id="EI6-Sh-d8E"/>
                     <constraint firstItem="CdO-Bb-4EK" firstAttribute="centerY" secondItem="EiC-PF-xif" secondAttribute="centerY" id="Pec-Qv-AtD"/>
                     <constraint firstAttribute="trailing" secondItem="CdO-Bb-4EK" secondAttribute="trailing" id="Tbh-i0-Csa"/>
-                    <constraint firstItem="Qa8-Ga-6Kt" firstAttribute="top" secondItem="EiC-PF-xif" secondAttribute="topMargin" constant="2" id="UuH-d4-2Ex"/>
                     <constraint firstAttribute="bottom" secondItem="CdO-Bb-4EK" secondAttribute="bottom" constant="2" id="VxK-VF-tRt"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Qa8-Ga-6Kt" secondAttribute="bottom" constant="2" id="bbs-I6-DSd"/>
-                    <constraint firstItem="Qa8-Ga-6Kt" firstAttribute="leading" secondItem="EiC-PF-xif" secondAttribute="leadingMargin" constant="10" id="oPk-qg-3cj"/>
+                    <constraint firstItem="Qa8-Ga-6Kt" firstAttribute="top" secondItem="EiC-PF-xif" secondAttribute="top" constant="10" id="cl8-pG-Rx8"/>
+                    <constraint firstAttribute="bottom" secondItem="Qa8-Ga-6Kt" secondAttribute="bottom" constant="10" id="cuv-MF-e2R"/>
                     <constraint firstItem="CdO-Bb-4EK" firstAttribute="top" secondItem="EiC-PF-xif" secondAttribute="top" constant="2" id="wLE-ci-Iah"/>
+                    <constraint firstItem="Qa8-Ga-6Kt" firstAttribute="leading" secondItem="EiC-PF-xif" secondAttribute="leading" constant="10" id="zJi-Qz-FV9"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
