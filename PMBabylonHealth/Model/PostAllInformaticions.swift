@@ -35,4 +35,3 @@ struct Address {
 let address = Address(latitude: "123", longitude: "456")
 let author = Author(authorName: "zé", emailAuthor: "zé@gmail.com")
 let fullPost = FullPost(author: author, numberOfComments: 10, address: address)
-

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class CollectionViewController: UIViewController {
     
@@ -18,73 +19,86 @@ class CollectionViewController: UIViewController {
             collectionView?.register(nib, forCellWithReuseIdentifier: "postCell")
         }
     }
-    
     @IBOutlet weak var activityIndicatorView: UIView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var connectionStatusLabel: UILabel!
     
     fileprivate let itemPerRow: CGFloat = 3
     fileprivate let sectionInsets = UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)
     
-    var postModel: [Post] = []
+    var post: [Post] = []
+    let databaseManager = DatabaseProviderRepresentable.sharedDatabaseManager
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NetworkManager.sharedNetworkManager.delegateReachability = self
+        getPosts()
+    }
+    
+    func getPosts() {
         
         stateActivityIndicator (state: false)
-        getPostsInformations()
-        self.title = "Posts"
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func getPostsInformations() {
-        
         NetworkManager.sharedNetworkManager.getPostInformations(completed: { result in
+            
             switch result {
-            case .success(let posts):
-                for i in 0 ..< posts.count {
-                    let post = posts[i]
-                    guard let userId = post["userId"] as? Int, let identifier = post["id"] as? Int, let title = post["title"] as? String, let body = post["body"] as? String else { return }
-                    let postStruct = Post(userId: userId, identifier: identifier, title: title, body: body)
-                    self.postModel.append(postStruct)
+            case .success(let allPosts):
+                for positionsPost in 0 ..< allPosts.count {
+                    let post = allPosts[positionsPost]
+                    guard let userId = post["userId"] as? Int, let identifierPost = post["id"] as? Int, let title = post["title"] as? String, let body = post["body"] as? String else { return }
+                    let newPost = Post.init(idUser: userId, identifierPost: identifierPost, titlePost: title, msgBody: body)
+                    self.post.append(newPost)
+                    self.databaseManager.addPost(post: newPost)
                 }
                 self.collectionView.reloadData()
+                
                 self.stateActivityIndicator (state: true)
-            case .failure(let error):
-                print(error)
+            case .failure(_):
+                if self.databaseManager.getAllPosts().count != 0 {
+                    for post in self.databaseManager.getAllPosts() {
+                        self.post.append(post)
+                    }
+                    self.collectionView.reloadData()
+                    self.stateActivityIndicator (state: true)
+                }
+                else {
+                    self.changeTextStatus(status: "Internet connection error")
+                }
             }
         })
     }
     
     func stateActivityIndicator (state: Bool) {
-        // FIXME: - simplificar! usar truques fixes
-        if !state {
-            activityIndicatorView.isHidden = state
-            activityIndicator.startAnimating()
-        } else {
-            activityIndicatorView.isHidden = state
+        //TODO FIX ME: - simplificar! usar truques fixes
+        //Era isto ??
+        let result = state ? true : false
+        activityIndicatorView.isHidden = result
+        if result {
             activityIndicator.stopAnimating()
+
+        } else {
+            activityIndicator.startAnimating()
         }
+    }
+    
+    func changeTextStatus(status: String) {
+        connectionStatusLabel.text = "Internet connection error"
     }
 }
 
 extension CollectionViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
-        // LIXO
-       // Passar ID Apenas
-        let postDetail = postModel[indexPath.row]
-        let detailTableViewController = DetailTableViewController()
-        detailTableViewController.userIdentifier = postDetail.userId
-        self.navigationController?.pushViewController(detailTableViewController, animated: true)
+        let postDetail = post[indexPath.row]
+        let detailsTableViewController = DetailsTableViewController()
+        detailsTableViewController.identifierUser = postDetail.userId
+        
+        self.navigationController?.pushViewController(detailsTableViewController, animated: true)
     }
 }
 
 extension CollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return postModel.count
+        return post.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -97,26 +111,41 @@ extension CollectionViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         // verificar que indexpath menor postModel count
-        let post = postModel[indexPath.row]
-        postCell.configurateCell(title: post.title, identifier: post.identifier)
+        let postDetail = post[indexPath.row]
+        postCell.configurateCell(title: postDetail.title , identifier: postDetail.identifierPost)
         return postCell
     }
 }
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let paddingSpace = sectionInsets.left * (itemPerRow + 1)
         let avaibleWidth = view.frame.width - paddingSpace
         let widthPerItem = avaibleWidth / itemPerRow
-        
         return CGSize(width: widthPerItem, height: widthPerItem)
     }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return sectionInsets
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
+    }
+}
+
+extension CollectionViewController: NetworkReachabilityDelegate {
+    
+    func listenForReachability(status: NetworkReachabilityManager.NetworkReachabilityStatus) {
+        switch status {
+        case .notReachable, .unknown:
+            print("test")
+//            changeTextStatus(status: "Internet connection error")
+//            self.stateActivityIndicator (state: false)
+            
+        default:
+            print("test")
+//            changeTextStatus(status: "Loading")
+//            self.stateActivityIndicator (state: true)
+        }
     }
 }

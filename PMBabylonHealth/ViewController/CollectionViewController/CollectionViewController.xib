@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,6 +15,7 @@
                 <outlet property="activityIndicator" destination="djQ-GW-ZdT" id="OUS-cO-SBQ"/>
                 <outlet property="activityIndicatorView" destination="HLi-dr-y1L" id="9Z1-E2-oCH"/>
                 <outlet property="collectionView" destination="Nep-3h-a7t" id="VJW-fr-OZk"/>
+                <outlet property="connectionStatusLabel" destination="fYY-FK-Np3" id="c7e-CP-oqB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -52,6 +53,7 @@
                             </subviews>
                         </stackView>
                     </subviews>
+                    <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="IoO-HW-Grd" firstAttribute="centerX" secondItem="HLi-dr-y1L" secondAttribute="centerX" id="3Vt-oe-QTP"/>
                         <constraint firstItem="IoO-HW-Grd" firstAttribute="centerY" secondItem="HLi-dr-y1L" secondAttribute="centerY" constant="-50" id="GdZ-ff-veo"/>
@@ -71,16 +73,5 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="postCell" id="dkK-Zz-KNX" customClass="PostCell" customModule="PMBabylonHealth" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="128" height="73"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                <rect key="frame" x="0.0" y="0.0" width="128" height="73"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </view>
-            <viewLayoutGuide key="safeArea" id="ogY-Vc-IDQ"/>
-            <size key="customSize" width="128" height="73"/>
-            <point key="canvasLocation" x="-418" y="109"/>
-        </collectionViewCell>
     </objects>
 </document>

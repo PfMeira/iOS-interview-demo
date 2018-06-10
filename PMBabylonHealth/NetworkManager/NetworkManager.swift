@@ -6,19 +6,35 @@
 //  Copyright © 2018 Pedro Meira. All rights reserved.
 //
 
-import UIKit
 import Alamofire
 
-class NetworkManager: NSObject {
+protocol NetworkReachabilityDelegate: class {
+    func listenForReachability(status: NetworkReachabilityManager.NetworkReachabilityStatus)
+}
+
+class NetworkManager {
     
     static let sharedNetworkManager = NetworkManager()
+    weak var delegateReachability: NetworkReachabilityDelegate?
+    let reachabilityManager = Alamofire.NetworkReachabilityManager()
     
-    private override init() {
-    }
-    
+    //NSCode
+
     typealias GetPosts = (Result <[[String: Any]]>) -> Void
     typealias GetUsers = (Result <[String: Any]>) -> Void
     typealias GetComments = (Result <Int>) -> Void
+
+    
+    private init() {
+        self.listenForReachability()
+    }
+    
+    func listenForReachability() {
+        reachabilityManager?.listener = { status in
+            self.delegateReachability?.listenForReachability(status: status)
+        }
+        reachabilityManager?.startListening()
+    }
     
     func getPostInformations(completed: @escaping GetPosts) {
         Alamofire.request("https://jsonplaceholder.typicode.com/posts", method: .get, encoding: JSONEncoding.default).responseJSON { response in
@@ -38,6 +54,7 @@ class NetworkManager: NSObject {
             }
         }
     }
+    
     func getUsersInformations(userIdentifier: Int, completed: @escaping GetUsers) {
         Alamofire.request("https://jsonplaceholder.typicode.com/users", method: .get, encoding: JSONEncoding.default).responseJSON { response in
             let responseResult = response.result
@@ -50,11 +67,11 @@ class NetworkManager: NSObject {
                 }
                 
                 var userDetail: [String: Any] = [:]
-                for i in 0 ..< usersDetails.count {
-                    let user = usersDetails[i]
+                for user1 in 0 ..< usersDetails.count {
+                    let user = usersDetails[user1]
                     guard let idUser = user["id"] as? Int else { return }
                     if userIdentifier == idUser {
-                        userDetail = usersDetails[i]
+                        userDetail = usersDetails[user1]
                         break
                     }
                 }
@@ -77,10 +94,10 @@ class NetworkManager: NSObject {
                     completed(.failure(error))
                     return
                 }
-//                let userPosts = commentsDetails.filter({ postData in
-//                    guard let id = postData["postId"] as? Int else { return false }
-//                    return id == userIdentifier
-//                })
+                //let userPosts = commentsDetails.filter({ postData in
+                //guard let id = postData["postId"] as? Int else { return false }
+                //  return id == userIdentifier
+                //})
                 completed(.success(commentsDetails.count))
                 
             case .failure(let error):

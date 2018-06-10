@@ -18,19 +18,28 @@
 		A335803B205B2BEB0008F33F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3358039205B2BEB0008F33F /* LaunchScreen.storyboard */; };
 		A3358046205B2BEB0008F33F /* PMBabylonHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3358045205B2BEB0008F33F /* PMBabylonHealthTests.swift */; };
 		A3358051205B2BEB0008F33F /* PMBabylonHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3358050205B2BEB0008F33F /* PMBabylonHealthUITests.swift */; };
-		A339E8DE2060671800F86A23 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A339E8DF2060671800F86A23 /* Alamofire.framework */; };
 		A339E8E120606B7E00F86A23 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A339E8E020606B7E00F86A23 /* NetworkManager.swift */; };
+		A35DA08220AC3C520038CE22 /* PostsInformations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35DA08120AC3C520038CE22 /* PostsInformations.swift */; };
 		A36A6FB720646B9E00BF8D4C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A36A6FB620646B9E00BF8D4C /* MapKit.framework */; };
+		A37E1673209BBE43005C9651 /*  DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37E1672209BBE43005C9651 /*  DatabaseManager.swift */; };
+		A37E1675209BC313005C9651 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37E1674209BC313005C9651 /* RealmSwift.framework */; };
+		A37E1677209CFDE7005C9651 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37E1676209CFDE7005C9651 /* Realm.framework */; };
+		A3986F2620CC7C8A004CCE2B /* UITableViewCell+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3986F2520CC7C8A004CCE2B /* UITableViewCell+Register.swift */; };
+		A39D9206207EB0B4007B15DA /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A39D9205207EB0B4007B15DA /* Alamofire.framework */; };
+		A39D920C2083ED5A007B15DA /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39D920B2083ED5A007B15DA /* MapView.swift */; };
+		A39D92132083EFFD007B15DA /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39D92112083EFFD007B15DA /* MapTableViewCell.swift */; };
+		A39D92142083EFFD007B15DA /* MapTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A39D92122083EFFD007B15DA /* MapTableViewCell.xib */; };
+		A3A6BBDB20851D2400620D2E /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A6BBDA20851D2400620D2E /* MapView.xib */; };
+		A3A6BBE2208554C900620D2E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A6BBE0208554C900620D2E /* MapController.swift */; };
+		A3A6BBE3208554C900620D2E /* MapController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3A6BBE1208554C900620D2E /* MapController.xib */; };
 		A3ABD86C206163CD00035F6D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABD86B206163CD00035F6D /* Post.swift */; };
-		A3ABD86E2061657F00035F6D /* FullPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ABD86D2061657F00035F6D /* FullPost.swift */; };
-		A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */; };
-		A3F0217E205EB2BA0067AE22 /* DetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */; };
+		A3BEE531207582AB004B1296 /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BEE52F207582AB004B1296 /* DetailsTableViewController.swift */; };
+		A3BEE532207582AB004B1296 /* DetailsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3BEE530207582AB004B1296 /* DetailsTableViewController.xib */; };
+		A3BEE53B2078D7E3004B1296 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BEE53A2078D7E3004B1296 /* CoreLocation.framework */; };
 		A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F02183205EB5D90067AE22 /* UserCell.swift */; };
 		A3F02186205EB5D90067AE22 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F02184205EB5D90067AE22 /* UserCell.xib */; };
 		A3F02188205EBEB10067AE22 /* CommentsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F02187205EBEB10067AE22 /* CommentsCell.swift */; };
 		A3F0218A205EDC490067AE22 /* CommentsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F02189205EDC490067AE22 /* CommentsCell.xib */; };
-		A3F02191205F1A630067AE22 /* MapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F0218F205F1A630067AE22 /* MapViewCell.swift */; };
-		A3F02192205F1A630067AE22 /* MapViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3F02190205F1A630067AE22 /* MapViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +77,7 @@
 		A31C64E2205DC853002B68CC /* CollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewController.xib; sourceTree = "<group>"; };
 		A31C64E7205DCB45002B68CC /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		A31C64E8205DCB45002B68CC /* PostCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostCell.xib; sourceTree = "<group>"; };
+		A3233BC0209A61CD00CECE88 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A335802D205B2BEB0008F33F /* PMBabylonHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PMBabylonHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3358030205B2BEB0008F33F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3358035205B2BEB0008F33F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,17 +92,28 @@
 		A3358052205B2BEB0008F33F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A339E8DF2060671800F86A23 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A339E8E020606B7E00F86A23 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A35DA08120AC3C520038CE22 /* PostsInformations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsInformations.swift; sourceTree = "<group>"; };
 		A36A6FB620646B9E00BF8D4C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A37E1672209BBE43005C9651 /*  DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " DatabaseManager.swift"; sourceTree = "<group>"; };
+		A37E1674209BC313005C9651 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A37E1676209CFDE7005C9651 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3986F2520CC7C8A004CCE2B /* UITableViewCell+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Register.swift"; sourceTree = "<group>"; };
+		A39D9205207EB0B4007B15DA /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A39D920B2083ED5A007B15DA /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		A39D92112083EFFD007B15DA /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		A39D92122083EFFD007B15DA /* MapTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapTableViewCell.xib; sourceTree = "<group>"; };
+		A3A6BBDA20851D2400620D2E /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		A3A6BBE0208554C900620D2E /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		A3A6BBE1208554C900620D2E /* MapController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapController.xib; sourceTree = "<group>"; };
 		A3ABD86B206163CD00035F6D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		A3ABD86D2061657F00035F6D /* FullPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullPost.swift; sourceTree = "<group>"; };
-		A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
-		A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewController.xib; sourceTree = "<group>"; };
+		A3BEE52F207582AB004B1296 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
+		A3BEE530207582AB004B1296 /* DetailsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsTableViewController.xib; sourceTree = "<group>"; };
+		A3BEE5332076A4E4004B1296 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3BEE53A2078D7E3004B1296 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A3F02183205EB5D90067AE22 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		A3F02184205EB5D90067AE22 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		A3F02187205EBEB10067AE22 /* CommentsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCell.swift; sourceTree = "<group>"; };
 		A3F02189205EDC490067AE22 /* CommentsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentsCell.xib; sourceTree = "<group>"; };
-		A3F0218F205F1A630067AE22 /* MapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCell.swift; sourceTree = "<group>"; };
-		A3F02190205F1A630067AE22 /* MapViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewCell.xib; sourceTree = "<group>"; };
 		BEDBFC2C70EEB2957A96764B /* Pods-PMBabylonHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMBabylonHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth.debug.xcconfig"; sourceTree = "<group>"; };
 		F03AE6E2BA49620FFD8819FB /* Pods-PMBabylonHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PMBabylonHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,8 +123,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37E1677209CFDE7005C9651 /* Realm.framework in Frameworks */,
+				A37E1675209BC313005C9651 /* RealmSwift.framework in Frameworks */,
+				A3BEE53B2078D7E3004B1296 /* CoreLocation.framework in Frameworks */,
+				A39D9206207EB0B4007B15DA /* Alamofire.framework in Frameworks */,
 				A36A6FB720646B9E00BF8D4C /* MapKit.framework in Frameworks */,
-				A339E8DE2060671800F86A23 /* Alamofire.framework in Frameworks */,
 				05FE2190C4D242ABDE3AE257 /* Pods_PMBabylonHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +152,12 @@
 		00F2CC6130E2E547C45F8BCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A37E1676209CFDE7005C9651 /* Realm.framework */,
+				A37E1674209BC313005C9651 /* RealmSwift.framework */,
+				A3233BC0209A61CD00CECE88 /* Reachability.framework */,
+				A39D9205207EB0B4007B15DA /* Alamofire.framework */,
+				A3BEE53A2078D7E3004B1296 /* CoreLocation.framework */,
+				A3BEE5332076A4E4004B1296 /* Alamofire.framework */,
 				A36A6FB620646B9E00BF8D4C /* MapKit.framework */,
 				A339E8DF2060671800F86A23 /* Alamofire.framework */,
 				08B4A4A3AA1231AAC1251F13 /* Pods_PMBabylonHealth.framework */,
@@ -189,6 +219,7 @@
 			children = (
 				A335805E205B2D740008F33F /* AppDelegate */,
 				A3358062205B2E490008F33F /* NetworkManager */,
+				A37E1671209BBE0B005C9651 /* DatabaseManager */,
 				A3ABD86A206163BD00035F6D /* Model */,
 				A335805F205B2D830008F33F /* ViewController */,
 				A3358060205B2DDD0008F33F /* View */,
@@ -233,6 +264,7 @@
 			children = (
 				A31C64DE205DC4B8002B68CC /* CollectionViewController */,
 				A3F0217A205EB2810067AE22 /* DetailViewController */,
+				A3BEE5352076D57F004B1296 /* MapViewController */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -240,6 +272,7 @@
 		A3358060205B2DDD0008F33F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A39D920D2083ED65007B15DA /* MapView */,
 				A3F0217F205EB5750067AE22 /* TableViewCell */,
 				A31C64E5205DCAEE002B68CC /* CollevtionViewCell */,
 			);
@@ -269,20 +302,56 @@
 			path = "New Group";
 			sourceTree = "<group>";
 		};
+		A37E1671209BBE0B005C9651 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				A37E1672209BBE43005C9651 /*  DatabaseManager.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		A39D920D2083ED65007B15DA /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				A39D920B2083ED5A007B15DA /* MapView.swift */,
+				A3A6BBDA20851D2400620D2E /* MapView.xib */,
+			);
+			name = MapView;
+			path = TableViewCell/MapView;
+			sourceTree = "<group>";
+		};
+		A39D92102083EFDC007B15DA /* MapViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A39D92112083EFFD007B15DA /* MapTableViewCell.swift */,
+				A39D92122083EFFD007B15DA /* MapTableViewCell.xib */,
+			);
+			path = MapViewCell;
+			sourceTree = "<group>";
+		};
 		A3ABD86A206163BD00035F6D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				A3ABD86B206163CD00035F6D /* Post.swift */,
-				A3ABD86D2061657F00035F6D /* FullPost.swift */,
+				A35DA08120AC3C520038CE22 /* PostsInformations.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A3BEE5352076D57F004B1296 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A3A6BBE0208554C900620D2E /* MapController.swift */,
+				A3A6BBE1208554C900620D2E /* MapController.xib */,
+			);
+			path = MapViewController;
 			sourceTree = "<group>";
 		};
 		A3F0217A205EB2810067AE22 /* DetailViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A3F0217B205EB2BA0067AE22 /* DetailTableViewController.swift */,
-				A3F0217C205EB2BA0067AE22 /* DetailTableViewController.xib */,
+				A3BEE52F207582AB004B1296 /* DetailsTableViewController.swift */,
+				A3BEE530207582AB004B1296 /* DetailsTableViewController.xib */,
 			);
 			path = DetailViewController;
 			sourceTree = "<group>";
@@ -292,18 +361,10 @@
 			children = (
 				A3F02182205EB5900067AE22 /* UserCell */,
 				A3F02181205EB5820067AE22 /* CommentsCell */,
-				A3F02180205EB57F0067AE22 /* MapViewCell */,
+				A39D92102083EFDC007B15DA /* MapViewCell */,
+				A3986F2520CC7C8A004CCE2B /* UITableViewCell+Register.swift */,
 			);
 			path = TableViewCell;
-			sourceTree = "<group>";
-		};
-		A3F02180205EB57F0067AE22 /* MapViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				A3F0218F205F1A630067AE22 /* MapViewCell.swift */,
-				A3F02190205F1A630067AE22 /* MapViewCell.xib */,
-			);
-			path = MapViewCell;
 			sourceTree = "<group>";
 		};
 		A3F02181205EB5820067AE22 /* CommentsCell */ = {
@@ -337,7 +398,6 @@
 				A335802A205B2BEB0008F33F /* Frameworks */,
 				A335802B205B2BEB0008F33F /* Resources */,
 				879AFCF2DD3DCAA2FDEF96B2 /* [CP] Embed Pods Frameworks */,
-				A3A754CE42A7057F77264B29 /* [CP] Copy Pods Resources */,
 				A3F02193205F259D0067AE22 /* CopyFiles */,
 			);
 			buildRules = (
@@ -392,7 +452,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Pedro Meira";
 				TargetAttributes = {
 					A335802C205B2BEB0008F33F = {
@@ -436,14 +496,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3A6BBE3208554C900620D2E /* MapController.xib in Resources */,
 				A31C64E4205DC853002B68CC /* CollectionViewController.xib in Resources */,
-				A3F0217E205EB2BA0067AE22 /* DetailTableViewController.xib in Resources */,
 				A335803B205B2BEB0008F33F /* LaunchScreen.storyboard in Resources */,
 				A31C64EA205DCB45002B68CC /* PostCell.xib in Resources */,
+				A3BEE532207582AB004B1296 /* DetailsTableViewController.xib in Resources */,
 				A3358038205B2BEB0008F33F /* Assets.xcassets in Resources */,
 				A3358036205B2BEB0008F33F /* Main.storyboard in Resources */,
 				A3F02186205EB5D90067AE22 /* UserCell.xib in Resources */,
-				A3F02192205F1A630067AE22 /* MapViewCell.xib in Resources */,
+				A3A6BBDB20851D2400620D2E /* MapView.xib in Resources */,
+				A39D92142083EFFD007B15DA /* MapTableViewCell.xib in Resources */,
 				A3F0218A205EDC490067AE22 /* CommentsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,41 +553,30 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A3A754CE42A7057F77264B29 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PMBabylonHealth/Pods-PMBabylonHealth-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A3F02194205F25A40067AE22 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
@@ -536,16 +587,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A35DA08220AC3C520038CE22 /* PostsInformations.swift in Sources */,
+				A3A6BBE2208554C900620D2E /* MapController.swift in Sources */,
+				A39D920C2083ED5A007B15DA /* MapView.swift in Sources */,
+				A37E1673209BBE43005C9651 /*  DatabaseManager.swift in Sources */,
+				A3986F2620CC7C8A004CCE2B /* UITableViewCell+Register.swift in Sources */,
 				A31C64E3205DC853002B68CC /* CollectionViewController.swift in Sources */,
-				A3ABD86E2061657F00035F6D /* FullPost.swift in Sources */,
 				A3F02188205EBEB10067AE22 /* CommentsCell.swift in Sources */,
 				A3358031205B2BEB0008F33F /* AppDelegate.swift in Sources */,
+				A3BEE531207582AB004B1296 /* DetailsTableViewController.swift in Sources */,
 				A31C64E9205DCB45002B68CC /* PostCell.swift in Sources */,
 				A339E8E120606B7E00F86A23 /* NetworkManager.swift in Sources */,
-				A3F02191205F1A630067AE22 /* MapViewCell.swift in Sources */,
+				A39D92132083EFFD007B15DA /* MapTableViewCell.swift in Sources */,
 				A3F02185205EB5D90067AE22 /* UserCell.swift in Sources */,
 				A3ABD86C206163CD00035F6D /* Post.swift in Sources */,
-				A3F0217D205EB2BA0067AE22 /* DetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +669,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -621,6 +677,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -648,7 +705,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -671,6 +728,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -678,6 +736,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -699,7 +758,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

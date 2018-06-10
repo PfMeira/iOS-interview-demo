@@ -1,54 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="70" id="KGk-i7-Jjw" customClass="UserCell" customModule="PMBabylonHealth" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="userCell" rowHeight="70" id="KGk-i7-Jjw" customClass="UserCell" customModule="PMBabylonHealth" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="390" height="69.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="r1R-S4-TRq">
-                        <rect key="frame" x="10" y="15" width="370" height="14.5"/>
-                        <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                        <size key="shadowOffset" width="1" height="-1"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="5bR-F6-y1w">
-                        <rect key="frame" x="10" y="44.5" width="370" height="14.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="pgx-ou-spa">
+                        <rect key="frame" x="15" y="5" width="360" height="14.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Author Name: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="FeV-bA-Rcu" userLabel="Label Author">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="14.5"/>
+                                <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Fa1-ow-Q8g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YOq-Ee-WXO" userLabel="Author Name">
+                                <rect key="frame" x="160" y="0.0" width="200" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="jcb-MU-KYT"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="pRo-ip-shn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="5Od-hd-GpY"/>
+                        </constraints>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="q0p-aF-Ms2">
+                        <rect key="frame" x="15" y="34" width="360" height="14.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Email :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="HZR-5J-Fhb" userLabel="Label Email">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="14.5"/>
+                                <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="xbH-lh-S86"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO9-7I-x5k">
+                                <rect key="frame" x="160" y="0.0" width="200" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="HDj-XL-Ok0"/>
+                                    <constraint firstAttribute="height" constant="14" id="L9C-Qm-qpi"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="PzA-fR-H0G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="XO9-7I-x5k" firstAttribute="top" secondItem="q0p-aF-Ms2" secondAttribute="top" id="02Y-fr-fud"/>
+                            <constraint firstAttribute="trailing" secondItem="XO9-7I-x5k" secondAttribute="trailing" id="q86-Tz-apd"/>
+                            <constraint firstAttribute="bottom" secondItem="XO9-7I-x5k" secondAttribute="bottom" id="u2Q-Os-njA"/>
+                        </constraints>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="r1R-S4-TRq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="216-Rc-Obc"/>
-                    <constraint firstItem="r1R-S4-TRq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="8nu-gs-NFr"/>
-                    <constraint firstItem="5bR-F6-y1w" firstAttribute="top" secondItem="r1R-S4-TRq" secondAttribute="bottom" constant="15" id="Nmb-14-c05"/>
-                    <constraint firstItem="5bR-F6-y1w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Qhx-UE-RqC"/>
-                    <constraint firstItem="5bR-F6-y1w" firstAttribute="width" secondItem="r1R-S4-TRq" secondAttribute="width" id="RBR-YH-BiK"/>
-                    <constraint firstItem="5bR-F6-y1w" firstAttribute="leading" secondItem="r1R-S4-TRq" secondAttribute="leading" id="RNG-gQ-f51"/>
-                    <constraint firstItem="5bR-F6-y1w" firstAttribute="height" secondItem="r1R-S4-TRq" secondAttribute="height" id="lxP-2G-7Fp"/>
-                    <constraint firstAttribute="trailing" secondItem="r1R-S4-TRq" secondAttribute="trailing" constant="10" id="siU-pY-Yu0"/>
+                    <constraint firstAttribute="trailing" secondItem="q0p-aF-Ms2" secondAttribute="trailing" constant="15" id="36r-H5-ieK"/>
+                    <constraint firstItem="q0p-aF-Ms2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="CMx-Rk-ht6"/>
+                    <constraint firstAttribute="trailing" secondItem="pgx-ou-spa" secondAttribute="trailing" constant="15" id="NnA-3D-f9q"/>
+                    <constraint firstItem="q0p-aF-Ms2" firstAttribute="top" secondItem="pgx-ou-spa" secondAttribute="bottom" constant="15" id="QnO-zI-qPF"/>
+                    <constraint firstItem="pgx-ou-spa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Y2O-9v-djg"/>
+                    <constraint firstItem="pgx-ou-spa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="usi-V3-bE0"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="authorName" destination="r1R-S4-TRq" id="iXa-bZ-vux"/>
-                <outlet property="email" destination="5bR-F6-y1w" id="Oh9-kB-wjN"/>
+                <outlet property="authorName" destination="YOq-Ee-WXO" id="WnC-xD-38D"/>
+                <outlet property="email" destination="XO9-7I-x5k" id="VJ0-dZ-Del"/>
             </connections>
             <point key="canvasLocation" x="74" y="67"/>
         </tableViewCell>

@@ -18,8 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = UIColor.white
-        let collectionView = CollectionViewController(nibName: "CollectionViewController", bundle: nil) as CollectionViewController
-        navController = UINavigationController(rootViewController: collectionView)
+        
+        let collectionViewController = CollectionViewController(nibName: "CollectionViewController", bundle: nil) as CollectionViewController
+        collectionViewController.title = "Posts"
+        navController = UINavigationController(rootViewController: collectionViewController)
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
